@@ -8,7 +8,8 @@ $(document).ready(function() {
 
 		$("#latestMovies .col-md-4 a").each(function(index) {
 			if(latestMovies[index] != undefined){
-				console.log(index + " " + latestMovies[index] + " " + $(this).children("p"));
+				//console.log(index + " " + latestMovies[index] + " " + $(this).children("p"));
+				$(this).attr({href: "movieItem.jsp?movieID=" + latestMovies[index].movieID});
 				$(this).children("p").html(latestMovies[index].movieTitle);
 				$(this).children("img").attr({src : "res/img/movies/" + latestMovies[index].coverURL + ".jpg", alt : latestMovies[index].movieTitle});
 				
@@ -17,10 +18,10 @@ $(document).ready(function() {
 		
 		$("#topSellerMovies .col-md-4 a").each(function(index) {
 			if(topMovies[index] != undefined){
-				console.log(index + " " + topMovies[index] + " " + $(this).children("p"));
+				//console.log(topMovies[index].movieID);
+				$(this).attr({href: "movieItem.jsp?movieID=" + topMovies[index].movieID});
 				$(this).children("p").html(topMovies[index].movieTitle);
 				$(this).children("img").attr({src : "res/img/movies/" + topMovies[index].coverURL + ".jpg", alt : topMovies[index].movieTitle});
-				
 			}
 		});
 		

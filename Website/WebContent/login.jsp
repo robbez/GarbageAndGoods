@@ -11,7 +11,8 @@
 	Cookie user = new Cookie("userName", userid);
     if (rs.next()) {
         session.setAttribute("userid", userid);
-        response.sendRedirect("index.jsp");
+        String referer = request.getHeader("Referer");
+        response.sendRedirect(referer);
     } else {
         out.println("Invalid password <a href='Index.jsp'>try again</a>");
     }

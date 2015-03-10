@@ -18,46 +18,7 @@
 <link rel="stylesheet" href="css/mainStyle.css">
 </head>
 <body>
-	<%
-	String loggedDropDown = "";
-	
-		if (session.getAttribute("userid") != null) {
-			//out.println("not logged in");
-			//response.sendRedirect("login.jsp");
-			 loggedDropDown = "<li class=\"dropdown\" id=\"accountDropdown\"><a href=\"#\"" +
-					"class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\"" +
-					"aria-expanded=\"false\">Dropdown <span class=\"caret\"></span>" +
-				"</a>"+
-					"<ul class=\"dropdown-menu\" role=\"menu\">" +
-						"<li><a href=\"#\">Action</a></li>" +
-						"<li><a href=\"#\">Another action</a></li>" +
-						"<li><a href=\"#\">Something else here</a></li>" +
-						"<li class=\"divider\"></li>" +
-						"<li><a href=\"logout.jsp\">Logout</a></li>"+
-					"</ul></li>";
-		} else {
-			loggedDropDown = "<li>" +
-					"<form method=\"post\" action=\"login.jsp\"" +
-					"class=\"navbar-form navbar-nav navbar-right\" name=\"loginForm\"" +
-					"id=\"loginForm\">" +
-					"<div class=\"form-group\">" +
-						"<span class=\"glyphicon glyphicon-remove-sign\" aria-hidden=\"true\"></span>\"" +
-						"<input type=\"text\" placeholder=\"Username\" name=\"userame\"" +
-							"id=\"username\" class=\"form-control\">" +
-					"</div>" +
-					"<div class=\"form-group\">" +
-						"<span class=\"glyphicon glyphicon-remove-sign\" aria-hidden=\"true\"></span>" +
-						"<input type=\"password\" placeholder=\"Password\" name=\"password\"" +
-							"id=\"password\" class=\"form-control\">" +
-					"</div>" +
-					"<button type=\"submit\" class=\"btn btn-success\" id=\"signInBtn\">Sign" +
-						"In</button>" +
-					"<button type=\"button\" class=\"btn btn-danger\" id=\"signUpBtn\">Sign" +
-						"Up</button>" +
-				"</form>" +
-			"</li>";
-		}
-	%>
+	<%@include file="checkLogin.jsp"%>
 
 	<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
 	<div class="container navbar-left" id="navLinks">
@@ -75,10 +36,7 @@
 
 			<ul class="nav navbar-nav">
 				<li><a href="index.jsp">HOME</a></li>
-				<li><a href="#">NIGGA</a></li>
-				<li><a href="#">ABDUL</a></li>
-				<li><a href="#">MAX</a></li>
-				<li><a href="#">PLINTUS</a></li>
+				<li><a href="#">BROWSE</a></li>
 			</ul>
 		</div>
 	</div>

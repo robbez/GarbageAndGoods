@@ -36,10 +36,7 @@
 
 			<ul class="nav navbar-nav">
 				<li><a href="index.jsp">HOME</a></li>
-				<li><a href="#">NIGGA</a></li>
-				<li><a href="#">ABDUL</a></li>
-				<li><a href="#">MAX</a></li>
-				<li><a href="#">PLINTUS</a></li>
+				<li><a href="#">Browse</a></li>
 			</ul>
 		</div>
 	</div>

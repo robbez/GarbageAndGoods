@@ -8,6 +8,10 @@ body {
 	background-position: center;
 }
 
+footer{
+	bottom: 0px;
+}
+
 #loginInfo {
 	margin-right: 20px;
 	margin-bottom: 0px;
