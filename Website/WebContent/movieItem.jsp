@@ -124,7 +124,7 @@
 							<div class="<%=stockClass%>"><%=stock %></div>
 							<hr>
 							<div class="btn-group cart">
-								<button type="button" class="btn btn-success" <%= purchaseButtonStatus %>>Purchase Item</button>
+								<button type="button" id="purchaseBtn" class="btn btn-success" <%= purchaseButtonStatus %>>Purchase Item</button>
 							</div>
 						</div>
 					</div>
@@ -186,7 +186,9 @@
 	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 
 	<script type="text/javascript">
-		
+		$("#purchaseBtn").click(function(){
+			window.location.href = "newPurchase.jsp?custID=<%= userid %>&movieID=<%=movieID%>";
+		});
 	</script>
 
 
